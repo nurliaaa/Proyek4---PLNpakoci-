@@ -12,7 +12,7 @@ function TableBasic(){
   const [posts, setPosts] = useState([])
 
   useEffect(() =>{
-      axios.get('http://3d4b-103-100-128-52.ngrok.io/api/pendaftars/?populate=pegawai&sort[0]=pegawai.id')
+      axios.get('http://235a-103-209-131-66.ngrok.io/api/pendaftars/?populate=pegawai&sort[0]=pegawai.id')
           .then(res => {
             console.log(res)
             setPosts(res.data.data)
@@ -38,7 +38,7 @@ function TableBasic(){
               {posts.map(post => 
                 <TableBody>
                   <TableRow>
-                    <TableCell>{post.attributes.pegawai.data.attributes.id}</TableCell>
+                    {/* <TableCell>{post.attributes.pegawai.data.attributes.id}</TableCell> */}
                     <TableCell align="right">{post.attributes.pegawai.data.attributes.nama}</TableCell>
                     <TableCell align="right">{post.attributes.pegawai.data.attributes.nip}</TableCell>
                     <TableCell align="right">{post.attributes.pegawai.data.attributes.jabatan}</TableCell>
